@@ -16,11 +16,11 @@ fs.readFile(filePath, 'utf8', (err, data) => {
             return;
         }
 
-        // 1. Thống kê số lượng bản ghi
+        // Thống kê số lượng bản ghi
         const totalRecords = records.length;
         console.log('Số lượng bản ghi:', totalRecords);
 
-        // 2. Tính tổng, min, max của gia (price)
+        // Tính tổng, min, max của gia (price)
         const prices = records.map(record => parseFloat(record.price)).filter(price => !isNaN(price));
         const totalPrice = prices.reduce((sum, price) => sum + price, 0);
         const minPrice = Math.min(...prices);
@@ -29,7 +29,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
         console.log('Giá nhỏ nhất :', minPrice.toFixed(2));
         console.log('Giá lớn nhất :', maxPrice.toFixed(2));
 
-        // 3. Sl sp (stock)
+        // Sl sp (stock)
         const stocks = records.map(record => parseInt(record.stock, 10)).filter(stock => !isNaN(stock));
         const totalStock = stocks.reduce((sum, stock) => sum + stock, 0);
         const minStock = Math.min(...stocks);
@@ -38,7 +38,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
         console.log('Số lượng sp ít nhất:', minStock);
         console.log('Số lượng sp nhiều nhất:', maxStock);
 
-        // 4. Đếm sl trong cột (material)
+        // Đếm sl trong cột (material)
         const uniqueMaterials = new Set(records.map(record => record.material));
         console.log('Số lượng chất liệu:', uniqueMaterials.size);
     });
