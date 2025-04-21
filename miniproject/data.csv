@@ -1,0 +1,11 @@
+id,name,category,price,stock,material
+1,Wooden Chair,Chair,45.99,120,Wood
+2,Modern Sofa,Sofa,399.99,50,Fabric
+3,Glass Table,Table,199.99,30,Glass
+4,Bookshelf,Shelf,89.99,80,Wood
+5,Office Desk,Desk,149.99,40,Metal
+6,Leather Recliner,Sofa,499.99,20,Leather
+7,Plastic Stool,Chair,19.99,200,Plastic
+8,King Size Bed,Bed,799.99,10,Wood
+9,TV Stand,Shelf,129.99,25,Metal
+10,Round Coffee Table,Table,99.99,60,Wood
